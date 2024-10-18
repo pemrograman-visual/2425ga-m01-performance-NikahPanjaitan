@@ -7,48 +7,36 @@ public class M01 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        double performa, indekssementara, performaakhir, skor, a, aB, b, bC, c, d, e;
-        double kredit1;
-        String skor1, kredit;
+        int totalkredit, indeks;
+        double performa, indekssementara, performaakhir, nilaiangka, a, aB, b, bC, c, d, e;
+        String nilaihuruf, kredit;
 
-        kredit1 = 0;
-        a = 4.0;
-        aB = 3.5;
-        b = 3.0;
-        bC = 2.5;
-        c = 2.0;
-        d = 1.0;
-        e = 0.0;
+        totalkredit = 4.0;
         kredit = input.nextLine();
-        if (kredit.equals("---")) {
-            kredit = kredit;
-        } else {
-            kredit1 = Integer.parseDouble(kredit);
-        }
-        skor1 = input.nextLine();
-        while (!skor1.equals("---")) {
-            if (skor1.equals("A")) {
-                skor = 4.0;
+        while (!kredit.equals("---")) {
+            nilaihuruf = input.nextLine();
+            if (nilaihuruf.equals("A")) {
+                nilaiangka = 4.0;
             } else {
-                if (skor1.equals("AB")) {
-                    skor = 3.5;
+                if (nilaihuruf.equals("AB")) {
+                    nilaiangka = 3.5;
                 } else {
-                    if (skor1.equals("B")) {
-                        skor = 3.0;
+                    if (nilaihuruf.equals("B")) {
+                        nilaiangka = 3.0;
                     } else {
-                        if (skor1.equals("BC")) {
-                            skor = 2.5;
+                        if (nilaihuruf.equals("BC")) {
+                            nilaiangka = 2.5;
                         } else {
-                            if (skor1.equals("C")) {
-                                skor = 2.0;
+                            if (nilaihuruf.equals("C")) {
+                                nilaiangka = 2.0;
                             } else {
-                                if (skor1.equals("D")) {
-                                    skor = 1.0;
+                                if (nilaihuruf.equals("D")) {
+                                    nilaiangka = 1.0;
                                 } else {
-                                    if (skor1.equals("E")) {
-                                        skor = 0.0;
+                                    if (nilaihuruf.equals("E")) {
+                                        nilaiangka = 0.0;
                                     } else {
-                                        skor = 0.0;
+                                        nilaiangka = 0.0;
                                     }
                                 }
                             }
@@ -56,15 +44,15 @@ public class M01 {
                     }
                 }
             }
-            performa = kredit1 * skor;
+            performa = totalkredit * nilaiangka;
             System.out.println(toFixed(performa,1));
             kredit = input.nextLine();
             if (kredit.equals("---")) {
                 kredit = kredit;
             } else {
-                kredit1 = Integer.parseDouble(kredit);
+                kredit = Double.parseDouble(kredit);
             }
-            skor1 = input.nextLine();
+            angka1 = input.nextLine();
         }
     }
     
@@ -72,4 +60,5 @@ public class M01 {
         return String.format("%." + digits + "f", value);
     }
 }
+
 
