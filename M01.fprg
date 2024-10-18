@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="buku"/>
+        <attribute name="authors" value="user"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-18 11:12:13 AM"/>
+        <attribute name="created" value="dXNlcjtERVNLVE9QLTlFSThTSUM7MjAyNC0xMC0xNjswMjoxNTowMiBQTTsyNzc4"/>
+        <attribute name="edited" value="dXNlcjtERVNLVE9QLTlFSThTSUM7MjAyNC0xMC0xNjswNDoxMzoxOCBQTTsxOzI4OTM="/>
+        <attribute name="edited" value="U3VjaGlhIFBhbmphaXRhbjtMQVBUT1AtN1ZGSUU1MEI7MjAyNC0xMC0xODsxMToxMjoxMyBBTTsyOzM5NDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="performa, indekssementara, performaakhir, skor, A, AB, B, BC, C, D, E" type="Real" array="False" size=""/>
+            <declare name="kredit1" type="Real" array="False" size=""/>
+            <declare name="skor1, kredit" type="String" array="False" size=""/>
+            <assign variable="kredit1" expression="0"/>
+            <assign variable="A" expression="4.0"/>
+            <assign variable="AB" expression="3.5"/>
+            <assign variable="B" expression="3.0"/>
+            <assign variable="BC" expression="2.5"/>
+            <assign variable="C" expression="2.0"/>
+            <assign variable="D" expression="1.0"/>
+            <assign variable="E" expression="0.0"/>
+            <input variable="kredit"/>
+            <if expression="kredit = &quot;---&quot;">
+                <then>
+                    <assign variable="kredit" expression="kredit"/>
+                </then>
+                <else>
+                    <assign variable="kredit1" expression="toReal(kredit)"/>
+                </else>
+            </if>
+            <input variable="skor1"/>
+            <while expression="skor1 !=&quot;---&quot;">
+                <if expression="skor1 = &quot;A&quot;">
+                    <then>
+                        <assign variable="skor" expression="4.0"/>
+                    </then>
+                    <else>
+                        <if expression="skor1 = &quot;AB&quot;">
+                            <then>
+                                <assign variable="skor" expression="3.5"/>
+                            </then>
+                            <else>
+                                <if expression="skor1 = &quot;B&quot;">
+                                    <then>
+                                        <assign variable="skor" expression="3.0"/>
+                                    </then>
+                                    <else>
+                                        <if expression="skor1 = &quot;BC&quot;">
+                                            <then>
+                                                <assign variable="skor" expression="2.5"/>
+                                            </then>
+                                            <else>
+                                                <if expression="skor1 = &quot;C&quot;">
+                                                    <then>
+                                                        <assign variable="skor" expression="2.0"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="skor1 = &quot;D&quot;">
+                                                            <then>
+                                                                <assign variable="skor" expression="1.0"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="skor1 = &quot;E&quot;">
+                                                                    <then>
+                                                                        <assign variable="skor" expression="0.0"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <assign variable="skor" expression="0.0"/>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="performa" expression="(kredit1*skor)"/>
+                <output expression="toFixed(performa,1)" newline="True"/>
+                <input variable="kredit"/>
+                <if expression="kredit = &quot;---&quot;">
+                    <then>
+                        <assign variable="kredit" expression="kredit"/>
+                    </then>
+                    <else>
+                        <assign variable="kredit1" expression="toReal(kredit)"/>
+                    </else>
+                </if>
+                <input variable="skor1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

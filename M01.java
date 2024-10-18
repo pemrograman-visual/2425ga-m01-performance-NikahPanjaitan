@@ -1,6 +1,5 @@
 // 12S24011- Pedro Simangunsong
 // 12S24041 - Nikah Suchia Panjaitan
-
 import java.util.*;
 import java.lang.Math;
 
@@ -73,3 +72,4 @@ public class M01 {
         return String.format("%." + digits + "f", value);
     }
 }
+
